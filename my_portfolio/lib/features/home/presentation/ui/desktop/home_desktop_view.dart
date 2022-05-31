@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:my_portfolio/features/home/presentation/controller/home_controller.dart';
 
 class HomeDesktopView extends StatelessWidget {
@@ -40,6 +39,10 @@ class HomeDesktopView extends StatelessWidget {
                       Get.changeThemeMode(ThemeMode.dark);
                     }
                   },
+                ),
+                trailing: Icon(
+                  Icons.desktop_mac,
+                  color: controller.isDarkMode ? Colors.white : Colors.black,
                 ),
                 destinations: const <NavigationRailDestination>[
                   NavigationRailDestination(
@@ -89,8 +92,9 @@ class HomeDesktopView extends StatelessWidget {
             // This is the main content.
             Expanded(
               child: Center(
-                child: Obx(() =>
-                    Text('selectedIndex: ${controller.selectedNavIndex}')),
+                child: Obx(
+                  () => controller.pages[controller.selectedNavIndex],
+                ),
               ),
             )
           ],
