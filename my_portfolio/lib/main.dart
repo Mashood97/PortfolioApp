@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/utils/di/di_container.dart';
 import 'package:my_portfolio/utils/routes/routes.dart';
 import 'package:my_portfolio/utils/theme/themes.dart';
@@ -21,9 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'My Portfolio',
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
-      //       theme: Themes.light,
-      // darkTheme: Themes.dark,
+      themeMode: ThemeMode.dark,
       theme: Themes.light,
       darkTheme: Themes.dark,
       initialRoute: AppRoutesName.splash,

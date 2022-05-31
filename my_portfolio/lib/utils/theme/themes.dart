@@ -6,6 +6,14 @@ class Themes {
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.amber.shade500,
     textTheme: GoogleFonts.montserratTextTheme(),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      selectedItemColor: Colors.amber,
+      unselectedItemColor: Colors.black,
+      elevation: 5.0,
+      showSelectedLabels: true,
+      showUnselectedLabels: false,
+      enableFeedback: true,
+    ),
     navigationRailTheme: NavigationRailThemeData(
       groupAlignment: 0,
       backgroundColor: Colors.white,
@@ -40,6 +48,14 @@ class Themes {
     scaffoldBackgroundColor: Colors.black,
     primaryColor: Colors.amber.shade500,
     textTheme: GoogleFonts.montserratTextTheme(),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      selectedItemColor: Colors.amber,
+      unselectedItemColor: Colors.white,
+      elevation: 5.0,
+      showSelectedLabels: true,
+      showUnselectedLabels: false,
+      enableFeedback: true,
+    ),
     navigationRailTheme: NavigationRailThemeData(
       groupAlignment: 0,
       backgroundColor: Colors.black,

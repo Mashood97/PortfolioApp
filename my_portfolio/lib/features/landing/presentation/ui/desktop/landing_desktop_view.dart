@@ -16,7 +16,7 @@ class LandingDesktopView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(
-          flex: 5,
+          flex: 4,
           child: LottieAnimationWidget(
             animLocalPath: Get.isDarkMode
                 ? AppAssets.personTypingDarkAnim
@@ -25,7 +25,7 @@ class LandingDesktopView extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 5,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -35,7 +35,7 @@ class LandingDesktopView extends StatelessWidget {
                 style: _theme.textTheme.headlineLarge?.copyWith(
                   fontSize: 40,
                   fontWeight: FontWeight.w700,
-                  color: Colors.black,
+                  color: Get.isDarkMode ? Colors.white : Colors.black,
                 ),
               ),
               const SizedBox(
@@ -48,7 +48,7 @@ class LandingDesktopView extends StatelessWidget {
                   style: _theme.textTheme.headlineLarge?.copyWith(
                     fontSize: 30,
                     fontWeight: FontWeight.w900,
-                    color: Colors.black,
+                    color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
                 ),
               ),

@@ -25,7 +25,7 @@ class HomeDesktopView extends StatelessWidget {
                 leading: IconButton(
                   icon: controller.isDarkMode
                       ? const Icon(
-                          Icons.light,
+                          Icons.light_mode,
                         )
                       : const Icon(
                           Icons.dark_mode,

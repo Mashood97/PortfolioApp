@@ -14,8 +14,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppResponsiveView(
       desktopLayout: HomeDesktopView(controller: _homeController),
-      mobileLayout: const HomeMobileView(),
-      tabletLayout: const HomeTabletView(),
+      mobileLayout: HomeMobileView(controller: _homeController),
+      tabletLayout: HomeTabletView(controller: _homeController),
     );
   }
 }
