@@ -7,8 +7,8 @@ class Themes {
     primaryColor: Colors.amber.shade500,
     textTheme: GoogleFonts.montserratTextTheme(),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      selectedItemColor: Colors.amber,
-      unselectedItemColor: Colors.black,
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Color(0xFFBDBDBD),
       elevation: 5.0,
       showSelectedLabels: true,
       showUnselectedLabels: false,

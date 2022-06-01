@@ -1,12 +1,18 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sign_button/sign_button.dart';
 
 import '../../../../../utils/constant/ui_constant.dart';
 import '../../../../../widget/lottie_anim.dart';
+import '../../controller/landing_controller.dart';
 
 class LandingTabletView extends StatelessWidget {
-  const LandingTabletView({Key? key}) : super(key: key);
+  const LandingTabletView({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
+  final LandingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +90,64 @@ class LandingTabletView extends StatelessWidget {
                     },
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Wrap(
+                runSpacing: 20,
+                children: [
+                  SignInButton.mini(
+                    elevation: 20.0,
+                    padding: 10,
+                    buttonSize: ButtonSize.large,
+                    buttonType: Get.isDarkMode
+                        ? ButtonType.githubDark
+                        : ButtonType.github,
+                    onPressed: () {
+                      controller.launchSocialAccounts(
+                          url: "https://github.com/Mashood97");
+                    },
+                  ),
+                  SignInButton.mini(
+                    elevation: 20.0,
+                    padding: 10,
+                    buttonSize: ButtonSize.large,
+                    buttonType: ButtonType.linkedin,
+                    onPressed: () {
+                      controller.launchSocialAccounts(
+                          url:
+                              "https://www.linkedin.com/in/mashood-siddiquie-5940a9168/");
+                    },
+                  ),
+                  SignInButton.mini(
+                    elevation: 20.0,
+                    padding: 10,
+                    buttonSize: ButtonSize.large,
+                    buttonType: Get.isDarkMode
+                        ? ButtonType.facebookDark
+                        : ButtonType.facebook,
+                    onPressed: () {
+                      controller.launchSocialAccounts(
+                          url:
+                              "https://web.facebook.com/mashood.sidd?_rdc=1&_rdr");
+                    },
+                  ),
+                  SignInButton.mini(
+                    elevation: 20.0,
+                    padding: 10,
+                    buttonSize: ButtonSize.large,
+                    buttonType: ButtonType.instagram,
+                    onPressed: () {},
+                  ),
+                  SignInButton.mini(
+                    elevation: 20.0,
+                    padding: 10,
+                    buttonSize: ButtonSize.large,
+                    buttonType: ButtonType.twitter,
+                    onPressed: () {},
+                  ),
+                ],
               ),
             ],
           ),

@@ -63,7 +63,7 @@ class HomeTabletView extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: RotatedBox(
                         quarterTurns: -1,
-                        child: Text("About us"),
+                        child: Text("About me"),
                       ),
                     ),
                   ),

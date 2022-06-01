@@ -61,7 +61,7 @@ class HomeDesktopView extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 24),
                       child: RotatedBox(
                         quarterTurns: -1,
-                        child: Text("About us"),
+                        child: Text("About me"),
                       ),
                     ),
                   ),

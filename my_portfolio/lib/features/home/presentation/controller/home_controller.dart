@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_portfolio/features/landing/presentation/pages/landing_page.dart';
 
+import '../../../contact_me/presentation/pages/contact_me_page.dart';
+
 class HomeController extends GetxController {
   final RxInt _selectedNavIndex = 0.obs;
   int get selectedNavIndex => _selectedNavIndex.value;
 
   final RxList<Widget> _pages = RxList<Widget>([
-    const LandingPage(),
+    LandingPage(),
     const Center(
       child: Text("About me"),
     ),
     const Center(
       child: Text("My Portfolio"),
     ),
-    const Center(
-      child: Text("Contact Me"),
-    ),
+    const ContactMePage(),
   ]);
 
   List<Widget> get pages => [..._pages];
