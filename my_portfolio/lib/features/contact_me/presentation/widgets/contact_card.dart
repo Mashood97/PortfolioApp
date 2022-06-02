@@ -34,6 +34,7 @@ class ContactCard extends StatelessWidget {
         child: InkWell(
           splashColor: _theme.primaryColor,
           hoverColor: _theme.primaryColor,
+          borderRadius: BorderRadius.circular(10),
           onTap: () {},
           child: Padding(
             padding: const EdgeInsets.all(10.0),

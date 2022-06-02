@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_portfolio/utils/di/di_container.dart';
+import 'package:my_portfolio/utils/responsive/app_responsive.dart';
 import 'package:my_portfolio/utils/routes/routes.dart';
 import 'package:my_portfolio/utils/theme/themes.dart';
 import 'package:url_strategy/url_strategy.dart';
@@ -22,6 +23,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: Themes.light,
+      builder: (ctx, child) {
+        SizeConfig().init(ctx);
+        return child!;
+      },
       darkTheme: Themes.dark,
       initialRoute: AppRoutesName.splash,
       getPages: AppRoutesName.pagesList,
