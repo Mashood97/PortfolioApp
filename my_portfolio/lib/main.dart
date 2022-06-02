@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'My Portfolio',
+      title: 'MashoodPortfolio',
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: Themes.light,

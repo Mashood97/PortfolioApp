@@ -35,37 +35,42 @@ class ContactCard extends StatelessWidget {
           splashColor: _theme.primaryColor,
           hoverColor: _theme.primaryColor,
           onTap: () {},
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Icon(
-                icon!,
-                size: iconSize!,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                title!,
-                style: _theme.textTheme.headlineLarge?.copyWith(
-                  fontSize: titleFontSize,
-                  fontWeight: FontWeight.w600,
-                  color: Get.isDarkMode ? Colors.white : Colors.black,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(
+                  icon!,
+                  size: iconSize!,
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                subTitle!,
-                style: _theme.textTheme.headlineLarge?.copyWith(
-                  fontSize: subTitleFontSize,
-                  fontWeight: FontWeight.w400,
-                  color: Get.isDarkMode ? Colors.white : Colors.black,
+                const SizedBox(
+                  height: 10,
                 ),
-              ),
-            ],
+                Text(
+                  title!,
+                  textAlign: TextAlign.center,
+                  style: _theme.textTheme.headlineLarge?.copyWith(
+                    fontSize: titleFontSize,
+                    fontWeight: FontWeight.w600,
+                    color: Get.isDarkMode ? Colors.white : Colors.black,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  subTitle!,
+                  textAlign: TextAlign.center,
+                  style: _theme.textTheme.headlineLarge?.copyWith(
+                    fontSize: subTitleFontSize,
+                    fontWeight: FontWeight.w400,
+                    color: Get.isDarkMode ? Colors.white : Colors.black,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -45,7 +45,7 @@ class ContactDesktopView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Text(
                   "I would love to learn about your project.",
@@ -57,7 +57,7 @@ class ContactDesktopView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Expanded(
                   child: ContactCard(
@@ -71,7 +71,7 @@ class ContactDesktopView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Expanded(
                   child: ContactCard(

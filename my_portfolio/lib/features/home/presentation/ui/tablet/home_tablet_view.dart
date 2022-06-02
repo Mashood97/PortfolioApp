@@ -32,6 +32,7 @@ class HomeTabletView extends StatelessWidget {
                       : const Icon(
                           Icons.dark_mode,
                         ),
+                  iconSize: 30,
                   color: controller.isDarkMode ? Colors.white : Colors.black,
                   onPressed: () {
                     controller.toggleDarkMode();
@@ -45,6 +46,7 @@ class HomeTabletView extends StatelessWidget {
                 trailing: Icon(
                   Icons.tablet_mac,
                   color: controller.isDarkMode ? Colors.white : Colors.black,
+                  size: 25,
                 ),
                 destinations: const <NavigationRailDestination>[
                   NavigationRailDestination(
@@ -53,7 +55,9 @@ class HomeTabletView extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 16),
                       child: RotatedBox(
                         quarterTurns: -1,
-                        child: Text("Home"),
+                        child: Text(
+                          "Home",
+                        ),
                       ),
                     ),
                   ),

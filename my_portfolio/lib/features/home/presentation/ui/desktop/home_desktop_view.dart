@@ -31,6 +31,7 @@ class HomeDesktopView extends StatelessWidget {
                           Icons.dark_mode,
                         ),
                   color: controller.isDarkMode ? Colors.white : Colors.black,
+                  iconSize: 40,
                   onPressed: () {
                     controller.toggleDarkMode();
                     if (Get.isDarkMode) {
