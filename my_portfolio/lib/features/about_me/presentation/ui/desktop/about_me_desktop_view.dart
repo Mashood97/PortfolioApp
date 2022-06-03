@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:my_portfolio/utils/constant/ui_constant.dart';
 import 'package:my_portfolio/utils/responsive/app_responsive.dart';
@@ -73,14 +74,13 @@ class AboutMeDesktopView extends StatelessWidget {
                       height: 20,
                     ),
                     GridView.count(
-                      crossAxisCount: 2,
-                      childAspectRatio: 1,
+                      crossAxisCount: 1,
+                      childAspectRatio: 2,
                       shrinkWrap: true,
                       mainAxisSpacing: 10,
                       crossAxisSpacing: 10,
-                      children: List.generate(
-                        4,
-                        (index) => Card(
+                      children: [
+                        Card(
                           elevation: 5,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -95,7 +95,8 @@ class AboutMeDesktopView extends StatelessWidget {
                               children: [
                                 FlutterLogo(
                                   curve: Curves.fastLinearToSlowEaseIn,
-                                  size: SizeConfig.blockSizeHorizontal! * 7,
+                                  size: SizeConfig.safeBlockHorizontal! * 15,
+                                  duration: const Duration(milliseconds: 500),
                                 ),
                                 Text(
                                   "Flutter",
@@ -103,7 +104,7 @@ class AboutMeDesktopView extends StatelessWidget {
                                   style:
                                       _theme.textTheme.headlineLarge?.copyWith(
                                     fontSize:
-                                        SizeConfig.safeBlockHorizontal! * 2.5,
+                                        SizeConfig.safeBlockHorizontal! * 6,
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: 1.5,
                                     color: Get.isDarkMode
@@ -115,7 +116,48 @@ class AboutMeDesktopView extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ),
+                        Card(
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: InkWell(
+                            hoverColor: _theme.primaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                            onTap: () {},
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                AnimatedContainer(
+                                  width: SizeConfig.safeBlockHorizontal! * 15,
+                                  height: SizeConfig.safeBlockHorizontal! * 15,
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.fastOutSlowIn,
+                                  child: SvgPicture.asset(
+                                    AppAssets.androidIcon!,
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                                Text(
+                                  "Android",
+                                  textAlign: TextAlign.start,
+                                  style:
+                                      _theme.textTheme.headlineLarge?.copyWith(
+                                    fontSize:
+                                        SizeConfig.safeBlockHorizontal! * 5,
+                                    fontWeight: FontWeight.w900,
+                                    letterSpacing: 1.5,
+                                    color: Get.isDarkMode
+                                        ? Colors.white
+                                        : Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
