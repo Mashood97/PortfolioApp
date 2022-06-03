@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../../utils/constant/ui_constant.dart';
+import '../../../../../utils/responsive/app_responsive.dart';
 import '../../../../../widget/lottie_anim.dart';
 import '../../widgets/contact_card.dart';
 
@@ -39,7 +40,7 @@ class ContactTabletView extends StatelessWidget {
                   "Get in touch",
                   textAlign: TextAlign.center,
                   style: _theme.textTheme.headlineLarge?.copyWith(
-                    fontSize: 30,
+                    fontSize: SizeConfig.safeBlockHorizontal! * 5,
                     fontWeight: FontWeight.w900,
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
@@ -51,7 +52,7 @@ class ContactTabletView extends StatelessWidget {
                   "I would love to learn about your project.",
                   textAlign: TextAlign.center,
                   style: _theme.textTheme.headlineLarge?.copyWith(
-                    fontSize: 20,
+                    fontSize: SizeConfig.safeBlockHorizontal! * 3,
                     fontWeight: FontWeight.w400,
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
@@ -64,10 +65,10 @@ class ContactTabletView extends StatelessWidget {
                     theme: _theme,
                     subTitle: "Karachi, Pakistan",
                     title: "Location",
-                    titleFontSize: 20,
-                    subTitleFontSize: 16,
+                    titleFontSize: SizeConfig.safeBlockHorizontal! * 3,
+                    subTitleFontSize: SizeConfig.safeBlockHorizontal! * 2,
                     icon: Icons.home,
-                    iconSize: 35,
+                    iconSize: SizeConfig.safeBlockHorizontal! * 5,
                   ),
                 ),
                 const SizedBox(
@@ -78,9 +79,9 @@ class ContactTabletView extends StatelessWidget {
                     theme: _theme,
                     subTitle: "(+92) 335-2655824",
                     title: "Phone",
-                    titleFontSize: 20,
-                    subTitleFontSize: 16,
-                    iconSize: 35,
+                    titleFontSize: SizeConfig.safeBlockHorizontal! * 3,
+                    subTitleFontSize: SizeConfig.safeBlockHorizontal! * 2,
+                    iconSize: SizeConfig.safeBlockHorizontal! * 5,
                     icon: Icons.phone_iphone,
                   ),
                 ),
@@ -92,9 +93,9 @@ class ContactTabletView extends StatelessWidget {
                     theme: _theme,
                     subTitle: "mashoodsidd97@gmail.com",
                     title: "Email",
-                    titleFontSize: 20,
-                    subTitleFontSize: 16,
-                    iconSize: 35,
+                    titleFontSize: SizeConfig.safeBlockHorizontal! * 3,
+                    subTitleFontSize: SizeConfig.safeBlockHorizontal! * 2,
+                    iconSize: SizeConfig.safeBlockHorizontal! * 5,
                     icon: Icons.email,
                   ),
                 ),

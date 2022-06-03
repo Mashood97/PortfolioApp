@@ -66,6 +66,7 @@ class ContactCard extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: _theme.textTheme.headlineLarge?.copyWith(
                     fontSize: subTitleFontSize,
+                    overflow: TextOverflow.clip,
                     fontWeight: FontWeight.w400,
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),

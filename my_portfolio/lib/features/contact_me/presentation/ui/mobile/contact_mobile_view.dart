@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_portfolio/utils/responsive/app_responsive.dart';
 
 import '../../../../../utils/constant/ui_constant.dart';
 import '../../../../../widget/lottie_anim.dart';
@@ -13,6 +14,7 @@ class ContactMobileView extends StatelessWidget {
     final _theme = Theme.of(context);
 
     return SingleChildScrollView(
+      controller: ScrollController(),
       physics: const BouncingScrollPhysics(),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -31,7 +33,7 @@ class ContactMobileView extends StatelessWidget {
               "Get in touch",
               textAlign: TextAlign.center,
               style: _theme.textTheme.headlineLarge?.copyWith(
-                fontSize: 25,
+                fontSize: SizeConfig.safeBlockHorizontal! * 8,
                 fontWeight: FontWeight.w900,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
@@ -43,45 +45,45 @@ class ContactMobileView extends StatelessWidget {
               "I would love to learn about your project.",
               textAlign: TextAlign.center,
               style: _theme.textTheme.headlineLarge?.copyWith(
-                fontSize: 16,
+                fontSize: SizeConfig.safeBlockHorizontal! * 4,
                 fontWeight: FontWeight.w400,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: SizeConfig.blockSizeHorizontal! * 3,
             ),
             ContactCard(
               theme: _theme,
               subTitle: "Karachi, Pakistan",
               title: "Location",
-              titleFontSize: 18,
-              subTitleFontSize: 14,
+              titleFontSize: SizeConfig.safeBlockHorizontal! * 5,
+              subTitleFontSize: SizeConfig.safeBlockHorizontal! * 3.5,
               icon: Icons.home,
-              iconSize: 30,
+              iconSize: SizeConfig.blockSizeHorizontal! * 7,
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: SizeConfig.blockSizeHorizontal! * 3,
             ),
             ContactCard(
               theme: _theme,
               subTitle: "(+92) 335-2655824",
               title: "Phone",
-              titleFontSize: 18,
-              subTitleFontSize: 14,
-              iconSize: 30,
+              titleFontSize: SizeConfig.safeBlockHorizontal! * 5,
+              subTitleFontSize: SizeConfig.safeBlockHorizontal! * 3.5,
+              iconSize: SizeConfig.blockSizeHorizontal! * 7,
               icon: Icons.phone_iphone,
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: SizeConfig.blockSizeHorizontal! * 3,
             ),
             ContactCard(
               theme: _theme,
               subTitle: "mashoodsidd97@gmail.com",
               title: "Email",
-              titleFontSize: 18,
-              subTitleFontSize: 14,
-              iconSize: 30,
+              titleFontSize: SizeConfig.safeBlockHorizontal! * 5,
+              subTitleFontSize: SizeConfig.safeBlockHorizontal! * 3.5,
+              iconSize: SizeConfig.blockSizeHorizontal! * 7,
               icon: Icons.email,
             ),
           ],
