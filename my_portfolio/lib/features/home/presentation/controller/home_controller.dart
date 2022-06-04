@@ -12,8 +12,11 @@ class HomeController extends GetxController {
   final RxList<Widget> _pages = RxList<Widget>([
     LandingPage(),
     const AboutMePage(),
-    const Center(
-      child: Text("My Portfolio"),
+    Center(
+      child: Text(
+        "My Portfolio",
+        style: TextStyle(color: Get.isDarkMode ? Colors.white : Colors.black),
+      ),
     ),
     const ContactMePage(),
   ]);
