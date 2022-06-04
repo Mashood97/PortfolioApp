@@ -11,6 +11,8 @@ class AboutMeMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
+    SizeConfig().init(context);
+
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Padding(
@@ -32,7 +34,7 @@ class AboutMeMobileView extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: SizeConfig.safeBlockVertical! * 2.5,
+              height: SizeConfig.safeBlockHorizontal! * 2,
             ),
             Text(
               "Hello, This is Muhammad Mashood Siddiquie, I have done Bachelor's in computer science from Sir Syed University Of Engineering & Technology. I have been creating mobile applications for 3 years using Flutter and Android.I am very passionate and dedicated to my work.",
@@ -44,7 +46,7 @@ class AboutMeMobileView extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: SizeConfig.safeBlockVertical! * 4,
+              height: SizeConfig.safeBlockHorizontal! * 2,
             ),
             Align(
               alignment: Alignment.centerLeft,
@@ -59,7 +61,7 @@ class AboutMeMobileView extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: SizeConfig.safeBlockVertical! * 2.5,
+              height: SizeConfig.safeBlockHorizontal! * 2,
             ),
             GridView.count(
               crossAxisCount: 2,
@@ -91,7 +93,7 @@ class AboutMeMobileView extends StatelessWidget {
                           "Flutter",
                           textAlign: TextAlign.start,
                           style: _theme.textTheme.headlineLarge?.copyWith(
-                            fontSize: SizeConfig.safeBlockHorizontal! * 5,
+                            fontSize: SizeConfig.safeBlockHorizontal! * 3.5,
                             fontWeight: FontWeight.w900,
                             letterSpacing: 1.5,
                             color: Get.isDarkMode ? Colors.white : Colors.black,
@@ -124,14 +126,17 @@ class AboutMeMobileView extends StatelessWidget {
                             fit: BoxFit.contain,
                           ),
                         ),
-                        Text(
-                          "Android",
-                          textAlign: TextAlign.start,
-                          style: _theme.textTheme.headlineLarge?.copyWith(
-                            fontSize: SizeConfig.safeBlockHorizontal! * 5,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 1.5,
-                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                        Flexible(
+                          child: Text(
+                            "Android",
+                            textAlign: TextAlign.start,
+                            style: _theme.textTheme.headlineLarge?.copyWith(
+                              fontSize: SizeConfig.safeBlockHorizontal! * 3.5,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: 1.5,
+                              color:
+                                  Get.isDarkMode ? Colors.white : Colors.black,
+                            ),
                           ),
                         ),
                       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_portfolio/utils/responsive/app_responsive.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({
@@ -46,8 +47,8 @@ class ContactCard extends StatelessWidget {
                   icon!,
                   size: iconSize!,
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: SizeConfig.blockSizeVertical! * 2,
                 ),
                 Text(
                   title!,
@@ -58,8 +59,8 @@ class ContactCard extends StatelessWidget {
                     color: Get.isDarkMode ? Colors.white : Colors.black,
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: SizeConfig.blockSizeVertical! * 2,
                 ),
                 Text(
                   subTitle!,

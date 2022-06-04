@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:my_portfolio/features/landing/presentation/controller/landing_controller.dart';
 
 import '../../../../../utils/constant/ui_constant.dart';
+import '../../../../../utils/responsive/app_responsive.dart';
 import '../../../../../widget/lottie_anim.dart';
 import '../../widgets/rounded_avatar_img.dart';
 
@@ -18,6 +19,8 @@ class LandingDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
+    SizeConfig().init(context);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,

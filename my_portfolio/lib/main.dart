@@ -21,10 +21,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'MashoodPortfolio',
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: Themes.light,
       builder: (ctx, child) {
-        SizeConfig().init(ctx);
         return child!;
       },
       darkTheme: Themes.dark,

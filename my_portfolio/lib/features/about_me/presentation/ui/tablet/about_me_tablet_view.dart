@@ -11,6 +11,8 @@ class AboutMeTabletView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
+    SizeConfig().init(context);
+
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Padding(
@@ -44,7 +46,7 @@ class AboutMeTabletView extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: SizeConfig.safeBlockVertical! * 5,
+              height: SizeConfig.safeBlockVertical! * 3.5,
             ),
             Align(
               alignment: Alignment.centerLeft,

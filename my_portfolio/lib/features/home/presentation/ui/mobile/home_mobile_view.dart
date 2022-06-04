@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../../utils/responsive/app_responsive.dart';
 import '../../controller/home_controller.dart';
 
 class HomeMobileView extends StatelessWidget {
@@ -12,6 +13,8 @@ class HomeMobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Scaffold(
       body: SafeArea(
         child: Obx(

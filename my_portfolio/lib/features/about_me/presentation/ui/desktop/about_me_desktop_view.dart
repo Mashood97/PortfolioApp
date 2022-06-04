@@ -11,7 +11,7 @@ class AboutMeDesktopView extends StatelessWidget {
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
     final _query = MediaQuery.of(context);
-    print(_query.size.width);
+    SizeConfig().init(context);
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Row(
@@ -46,8 +46,8 @@ class AboutMeDesktopView extends StatelessWidget {
                         color: Get.isDarkMode ? Colors.white : Colors.black,
                       ),
                     ),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: SizeConfig.blockSizeHorizontal! * 2,
                     ),
                     Text(
                       "Hello, This is Muhammad Mashood Siddiquie, I have done Bachelor's in computer science from Sir Syed University Of Engineering & Technology. I have been creating mobile applications for 3 years using Flutter and Android.I am very passionate and dedicated to my work.",
@@ -58,8 +58,8 @@ class AboutMeDesktopView extends StatelessWidget {
                         color: Get.isDarkMode ? Colors.white : Colors.black,
                       ),
                     ),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: SizeConfig.blockSizeHorizontal! * 2,
                     ),
                     Text(
                       "These are some of my skills:",
@@ -70,8 +70,8 @@ class AboutMeDesktopView extends StatelessWidget {
                         color: Get.isDarkMode ? Colors.white : Colors.black,
                       ),
                     ),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: SizeConfig.blockSizeHorizontal! * 2,
                     ),
                     GridView.count(
                       crossAxisCount: 1,

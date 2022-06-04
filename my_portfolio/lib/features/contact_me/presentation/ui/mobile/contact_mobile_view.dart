@@ -12,6 +12,7 @@ class ContactMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _theme = Theme.of(context);
+    SizeConfig().init(context);
 
     return SingleChildScrollView(
       controller: ScrollController(),
