@@ -23,40 +23,16 @@ class AppResponsiveView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(
+    return ScreenTypeLayout.builder(
+      mobile: (ctx) => mobileLayout!,
+      desktop: (ctx) => desktopLayout!,
+      tablet: (ctx) => tabletLayout!,
       breakpoints: const ScreenBreakpoints(
         desktop: 900,
         tablet: 700,
         watch: 275,
       ),
-      builder: (context, sizingInformation) {
-        // Check the sizing information here and return your UI
-        if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
-          return desktopLayout!;
-        }
-
-        if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
-          return tabletLayout!;
-        }
-
-        // if (sizingInformation.deviceScreenType == DeviceScreenType.watch) {
-        //   return
-        // }
-
-        return mobileLayout!;
-      },
     );
-
-    // ScreenTypeLayout.builder(
-    //   mobile: (ctx) => mobileLayout!,
-    //   desktop: (ctx) => desktopLayout!,
-    //   tablet: (ctx) => tabletLayout!,
-    // breakpoints: const ScreenBreakpoints(
-    //   desktop: 900,
-    //   tablet: 700,
-    //   watch: 275,
-    // ),
-    // );
   }
 }
 
