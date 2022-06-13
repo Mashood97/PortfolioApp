@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "498751366733",
+    "project_id": "mashood-dev-portfolio",
+    "storage_bucket": "mashood-dev-portfolio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498751366733:android:89c2681c0ea896e84ade04",
+        "android_client_info": {
+          "package_name": "com.example.my_portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498751366733-l6fijc6rq6o9lqq0d0rqbg38t3sfsr86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxuPORtjmZsXZ4Z1I7RMI7JOwjIymQ_r0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498751366733-l6fijc6rq6o9lqq0d0rqbg38t3sfsr86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

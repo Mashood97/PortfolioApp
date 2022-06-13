@@ -30,7 +30,7 @@ class AppResponsiveView extends StatelessWidget {
       breakpoints: const ScreenBreakpoints(
         desktop: 900,
         tablet: 700,
-        watch: 275,
+        watch: 200,
       ),
     );
   }
