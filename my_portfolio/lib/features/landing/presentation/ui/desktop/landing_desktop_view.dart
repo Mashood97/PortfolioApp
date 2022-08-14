@@ -27,11 +27,10 @@ class LandingDesktopView extends StatelessWidget {
       children: [
         Expanded(
           flex: 4,
-          child: LottieAnimationWidget(
-            animLocalPath: Get.isDarkMode
-                ? AppAssets.personTypingDarkAnim
-                : AppAssets.personTypingAnim,
-            fit: BoxFit.contain,
+          child: Image.asset(
+            "assets/icons/img1.png",
+            filterQuality: FilterQuality.high,
+            fit: BoxFit.scaleDown,
           ),
         ),
         Expanded(

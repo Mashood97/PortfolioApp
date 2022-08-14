@@ -33,14 +33,14 @@ class LandingMobileView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            LottieAnimationWidget(
-              animLocalPath: Get.isDarkMode
-                  ? AppAssets.personTypingDarkAnim
-                  : AppAssets.personTypingAnim,
-              fit: BoxFit.contain,
-            ),
             SizedBox(
-              height: SizeConfig.safeBlockVertical! * 4,
+              height: SizeConfig.safeBlockVertical! * 45,
+              width: SizeConfig.safeBlockHorizontal! * 80,
+              child: Image.asset(
+                "assets/icons/img1.png",
+                filterQuality: FilterQuality.high,
+                fit: BoxFit.contain,
+              ),
             ),
             Text(
               "Hello,",
