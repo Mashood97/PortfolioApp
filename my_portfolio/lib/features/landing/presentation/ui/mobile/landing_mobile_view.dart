@@ -45,23 +45,23 @@ class LandingMobileView extends StatelessWidget {
             Text(
               "Hello,",
               style: _theme.textTheme.headlineLarge?.copyWith(
-                fontSize: SizeConfig.safeBlockHorizontal! * 10,
+                fontSize: SizeConfig.safeBlockHorizontal! * 5,
                 fontWeight: FontWeight.w700,
+                letterSpacing: 1,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
             ),
             SizedBox(
               height: SizeConfig.blockSizeVertical! * 2,
             ),
-            FittedBox(
-              fit: BoxFit.cover,
-              child: Text(
-                "I'm Mashood",
-                style: _theme.textTheme.headlineLarge?.copyWith(
-                  fontSize: SizeConfig.safeBlockHorizontal! * 12,
-                  fontWeight: FontWeight.w900,
-                  color: Get.isDarkMode ? Colors.white : Colors.black,
-                ),
+            Text(
+              "I'm Mashood",
+              style: _theme.textTheme.headlineLarge?.copyWith(
+                fontSize: SizeConfig.safeBlockHorizontal! * 8,
+                height: 1,
+                letterSpacing: 1.5,
+                fontWeight: FontWeight.w900,
+                color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
             ),
             SizedBox(
@@ -79,8 +79,9 @@ class LandingMobileView extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.fade,
                 style: _theme.textTheme.headlineLarge!.copyWith(
-                  fontSize: SizeConfig.safeBlockHorizontal! * 7,
+                  fontSize: SizeConfig.safeBlockHorizontal! * 5,
                   fontWeight: FontWeight.w600,
+                  height: 1.5,
                   color: Colors.black,
                 ),
                 child: AnimatedTextKit(

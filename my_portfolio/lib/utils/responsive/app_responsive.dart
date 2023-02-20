@@ -28,7 +28,7 @@ class AppResponsiveView extends StatelessWidget {
       desktop: (ctx) => desktopLayout!,
       tablet: (ctx) => tabletLayout!,
       breakpoints: const ScreenBreakpoints(
-        desktop: 900,
+        desktop: 1400,
         tablet: 700,
         watch: 200,
       ),

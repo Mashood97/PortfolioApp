@@ -34,13 +34,14 @@ class AboutMeTabletView extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: SizeConfig.safeBlockVertical! * 3.5,
+              height: SizeConfig.safeBlockVertical! * 2.5,
             ),
             Text(
-              "Hello, This is Muhammad Mashood Siddiquie, I have done Bachelor's in computer science from Sir Syed University Of Engineering & Technology. I have been creating mobile applications for 3 years using Flutter and Android.I am very passionate and dedicated to my work.",
-              textAlign: TextAlign.center,
+              "Hello, This is Muhammad Mashood Siddiquie, I have completed my Bachelor's in Computer Science from Sir Syed University Of Engineering & Technology. I have been creating mobile applications for 3+ years using Flutter and Android. I am very passionate and dedicated to my work. In my leisure time i love to play video games.",
+              textAlign: TextAlign.justify,
               style: _theme.textTheme.headlineLarge?.copyWith(
-                fontSize: SizeConfig.safeBlockHorizontal! * 3,
+                fontSize: SizeConfig.safeBlockHorizontal! * 1.75,
+                letterSpacing: 1.25,
                 fontWeight: FontWeight.w500,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
@@ -48,96 +49,127 @@ class AboutMeTabletView extends StatelessWidget {
             SizedBox(
               height: SizeConfig.safeBlockVertical! * 3.5,
             ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "These are some of my skills:",
-                textAlign: TextAlign.start,
-                style: _theme.textTheme.headlineLarge?.copyWith(
-                  fontSize: SizeConfig.safeBlockHorizontal! * 4,
-                  fontWeight: FontWeight.w900,
-                  color: Get.isDarkMode ? Colors.white : Colors.black,
-                ),
+            Text(
+              "These are some of my skills:",
+              textAlign: TextAlign.start,
+              style: _theme.textTheme.headlineLarge?.copyWith(
+                letterSpacing: 3,
+                fontSize: SizeConfig.safeBlockHorizontal! * 2,
+                fontWeight: FontWeight.w900,
+                color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
             ),
             SizedBox(
-              height: SizeConfig.safeBlockVertical! * 3.5,
+              height: SizeConfig.blockSizeHorizontal! * 2,
             ),
-            GridView.count(
-              crossAxisCount: 2,
-              childAspectRatio: 1,
-              shrinkWrap: true,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              physics: const NeverScrollableScrollPhysics(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Card(
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: InkWell(
-                    hoverColor: _theme.primaryColor,
-                    borderRadius: BorderRadius.circular(10),
-                    onTap: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        FlutterLogo(
-                          curve: Curves.fastLinearToSlowEaseIn,
-                          size: SizeConfig.safeBlockHorizontal! * 15,
-                          duration: const Duration(milliseconds: 500),
-                        ),
-                        Text(
-                          "Flutter",
-                          textAlign: TextAlign.start,
-                          style: _theme.textTheme.headlineLarge?.copyWith(
-                            fontSize: SizeConfig.safeBlockHorizontal! * 6,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 1.5,
-                            color: Get.isDarkMode ? Colors.white : Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
+                FlutterLogo(
+                  curve: Curves.fastLinearToSlowEaseIn,
+                  size: SizeConfig.safeBlockHorizontal! * 4,
+                  duration: const Duration(milliseconds: 500),
+                ),
+                SizedBox(
+                  width: SizeConfig.safeBlockHorizontal! * 2,
+                ),
+                const Expanded(
+                  child: LinearProgressIndicator(
+                    backgroundColor: Colors.grey,
+                    color: Colors.amber,
+                    semanticsLabel: "Flutter",
+                    value: 0.9,
                   ),
                 ),
-                Card(
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              ],
+            ),
+            SizedBox(
+              height: SizeConfig.safeBlockHorizontal! * 4,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                AnimatedContainer(
+                  width: SizeConfig.safeBlockHorizontal! * 5,
+                  height: SizeConfig.safeBlockHorizontal! * 5,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.fastOutSlowIn,
+                  child: SvgPicture.asset(
+                    AppAssets.androidIcon!,
+                    fit: BoxFit.contain,
                   ),
-                  child: InkWell(
-                    hoverColor: _theme.primaryColor,
-                    borderRadius: BorderRadius.circular(10),
-                    onTap: () {},
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        AnimatedContainer(
-                          width: SizeConfig.safeBlockHorizontal! * 15,
-                          height: SizeConfig.safeBlockHorizontal! * 15,
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.fastOutSlowIn,
-                          child: SvgPicture.asset(
-                            AppAssets.androidIcon!,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        Text(
-                          "Android",
-                          textAlign: TextAlign.start,
-                          style: _theme.textTheme.headlineLarge?.copyWith(
-                            fontSize: SizeConfig.safeBlockHorizontal! * 6,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 1.5,
-                            color: Get.isDarkMode ? Colors.white : Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
+                ),
+                SizedBox(
+                  width: SizeConfig.safeBlockHorizontal! * 2,
+                ),
+                const Expanded(
+                  child: LinearProgressIndicator(
+                    backgroundColor: Colors.grey,
+                    semanticsLabel: "Android",
+                    color: Colors.amber,
+                    value: 0.75,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: SizeConfig.safeBlockHorizontal! * 4,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                AnimatedContainer(
+                  width: SizeConfig.safeBlockHorizontal! * 5,
+                  height: SizeConfig.safeBlockHorizontal! * 5,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.fastOutSlowIn,
+                  child: SvgPicture.asset(
+                    AppAssets.jiraIcon!,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                SizedBox(
+                  width: SizeConfig.safeBlockHorizontal! * 2,
+                ),
+                const Expanded(
+                  child: LinearProgressIndicator(
+                    backgroundColor: Colors.grey,
+                    semanticsLabel: "Jira",
+                    color: Colors.amber,
+                    value: 0.7,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: SizeConfig.safeBlockHorizontal! * 4,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                AnimatedContainer(
+                  width: SizeConfig.safeBlockHorizontal! * 5,
+                  height: SizeConfig.safeBlockHorizontal! * 5,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.fastOutSlowIn,
+                  child: SvgPicture.asset(
+                    AppAssets.gitIcon!,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                SizedBox(
+                  width: SizeConfig.safeBlockHorizontal! * 2,
+                ),
+                const Expanded(
+                  child: LinearProgressIndicator(
+                    backgroundColor: Colors.grey,
+                    semanticsLabel: "Git",
+                    color: Colors.amber,
+                    value: 0.7,
                   ),
                 ),
               ],

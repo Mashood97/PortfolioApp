@@ -43,7 +43,7 @@ class LandingTabletView extends StatelessWidget {
             Text(
               "Hello,",
               style: _theme.textTheme.headlineLarge?.copyWith(
-                fontSize: 50,
+                fontSize: SizeConfig.safeBlockHorizontal! * 3.5,
                 fontWeight: FontWeight.w700,
                 color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
@@ -51,15 +51,13 @@ class LandingTabletView extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            FittedBox(
-              fit: BoxFit.cover,
-              child: Text(
-                "I'm Mashood",
-                style: _theme.textTheme.headlineLarge?.copyWith(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w900,
-                  color: Get.isDarkMode ? Colors.white : Colors.black,
-                ),
+            Text(
+              "I'm Mashood",
+              style: _theme.textTheme.headlineLarge?.copyWith(
+                fontSize: SizeConfig.safeBlockHorizontal! * 5.5,
+                fontWeight: FontWeight.w900,
+                height: 1.5,
+                color: Get.isDarkMode ? Colors.white : Colors.black,
               ),
             ),
             const SizedBox(
@@ -77,7 +75,7 @@ class LandingTabletView extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.fade,
                 style: _theme.textTheme.headlineLarge!.copyWith(
-                  fontSize: 40,
+                  fontSize: SizeConfig.safeBlockHorizontal! * 3.5,
                   fontWeight: FontWeight.w600,
                   color: Colors.black,
                 ),

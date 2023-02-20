@@ -92,16 +92,6 @@ class HomeTabletView extends StatelessWidget {
                                 padding: EdgeInsets.symmetric(vertical: 16),
                                 child: RotatedBox(
                                   quarterTurns: -1,
-                                  child: Text("My Portfolio"),
-                                ),
-                              ),
-                            ),
-                            NavigationRailDestination(
-                              icon: SizedBox.shrink(),
-                              label: Padding(
-                                padding: EdgeInsets.symmetric(vertical: 16),
-                                child: RotatedBox(
-                                  quarterTurns: -1,
                                   child: Text("Contact me"),
                                 ),
                               ),

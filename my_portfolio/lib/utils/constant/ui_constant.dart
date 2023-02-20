@@ -9,6 +9,8 @@ class AppAssets {
   static const String? mediumIcon = "$_icons/icons8-medium.svg";
   static const String? devImage = "$_icons/devImage.jpeg";
   static const String? androidIcon = "$_icons/icons8-android-os.svg";
+  static const String? jiraIcon = "$_icons/jira_icon.svg";
+  static const String? gitIcon = "$_icons/git_icon.svg";
 //-------- Lottie animation----------
   static const splashAnimation = "$_jsonFiles/106405-energy-rocket.json";
   static const personTypingDarkAnim =
