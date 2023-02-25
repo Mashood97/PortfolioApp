@@ -3,6 +3,8 @@ class AppAssets {
   static const String _icons = "assets/icons";
 
 //------- Icons--------
+  static const String? fiverIcon = "$_icons/fiverr.svg";
+  static const String? upworkIcon = "$_icons/upwork.svg";
   static const String? fbIcon = "$_icons/icons8-facebook-circled.svg";
   static const String? githubIcon = "$_icons/icons8-github.svg";
   static const String? linkedinIcon = "$_icons/icons8-linkedin-circled.svg";
@@ -12,11 +14,4 @@ class AppAssets {
   static const String? jiraIcon = "$_icons/jira_icon.svg";
   static const String? gitIcon = "$_icons/git_icon.svg";
 //-------- Lottie animation----------
-  static const splashAnimation = "$_jsonFiles/106405-energy-rocket.json";
-  static const personTypingDarkAnim =
-      "$_jsonFiles/101381-orange-t-shirt-coder-dark.json";
-  static const personTypingAnim =
-      "$_jsonFiles/101381-orange-t-shirt-coder.json";
-  static const contactMeDarkAnim = "$_jsonFiles/102642-contact-dark.json";
-  static const contactMeAnim = "$_jsonFiles/102642-contact.json";
 }

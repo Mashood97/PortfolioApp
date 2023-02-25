@@ -130,6 +130,21 @@ class LandingTabletView extends StatelessWidget {
                             "https://web.facebook.com/mashood.sidd?_rdc=1&_rdr");
                   },
                 ),
+                RoundedAvatarSvgImage(
+                  appImage: AppAssets.fiverIcon,
+                  onTap: () {
+                    controller.launchSocialAccounts(
+                        url: "https://www.fiverr.com/mashood9712");
+                  },
+                ),
+                RoundedAvatarSvgImage(
+                  appImage: AppAssets.upworkIcon,
+                  onTap: () {
+                    controller.launchSocialAccounts(
+                        url:
+                            "https://www.upwork.com/freelancers/~013e211d8172e9bd49");
+                  },
+                ),
               ],
             )
           ],

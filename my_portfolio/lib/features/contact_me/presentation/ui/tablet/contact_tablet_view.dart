@@ -5,6 +5,7 @@ import '../../../../../utils/constant/ui_constant.dart';
 import '../../../../../utils/responsive/app_responsive.dart';
 import '../../../../../widget/lottie_anim.dart';
 import '../../widgets/contact_card.dart';
+import '../../widgets/contact_form.dart';
 
 class ContactTabletView extends StatelessWidget {
   const ContactTabletView({Key? key}) : super(key: key);
@@ -18,14 +19,9 @@ class ContactTabletView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Expanded(
+        const Expanded(
           flex: 3,
-          child: LottieAnimationWidget(
-            animLocalPath: Get.isDarkMode
-                ? AppAssets.contactMeDarkAnim
-                : AppAssets.contactMeAnim,
-            fit: BoxFit.contain,
-          ),
+          child: ContactForm(),
         ),
         const VerticalDivider(thickness: 1, width: 1),
         Expanded(

@@ -5,6 +5,7 @@ import 'package:my_portfolio/utils/responsive/app_responsive.dart';
 import '../../../../../utils/constant/ui_constant.dart';
 import '../../../../../widget/lottie_anim.dart';
 import '../../widgets/contact_card.dart';
+import '../../widgets/contact_form.dart';
 
 class ContactMobileView extends StatelessWidget {
   const ContactMobileView({Key? key}) : super(key: key);
@@ -23,13 +24,6 @@ class ContactMobileView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            LottieAnimationWidget(
-              animLocalPath: Get.isDarkMode
-                  ? AppAssets.contactMeDarkAnim
-                  : AppAssets.contactMeAnim,
-              fit: BoxFit.contain,
-            ),
-            const VerticalDivider(thickness: 1, width: 1),
             Text(
               "Get in touch",
               textAlign: TextAlign.center,
@@ -87,6 +81,10 @@ class ContactMobileView extends StatelessWidget {
               iconSize: SizeConfig.blockSizeHorizontal! * 5,
               icon: Icons.email,
             ),
+            SizedBox(
+              height: SizeConfig.blockSizeHorizontal! * 3,
+            ),
+            const ContactForm(),
           ],
         ),
       ),

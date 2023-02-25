@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_portfolio/features/contact_me/presentation/controller/contact_me_controller.dart';
 import 'package:my_portfolio/features/landing/presentation/pages/landing_page.dart';
 
 import '../../../about_me/presentation/pages/about_me_page.dart';
@@ -26,5 +27,8 @@ class HomeController extends GetxController {
 
   void onNavigationRailIndexChange({required int index}) {
     _selectedNavIndex.value = index;
+    if (_selectedNavIndex.value == 2) {
+      Get.put(ContactMeController());
+    }
   }
 }

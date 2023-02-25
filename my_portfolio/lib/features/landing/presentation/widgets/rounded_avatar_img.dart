@@ -23,6 +23,8 @@ class RoundedAvatarSvgImage extends StatelessWidget {
       onTap: onTap,
       child: SvgPicture.asset(
         appImage!,
+        height: 60,
+        width: 60,
         fit: fit!,
         color: Get.isDarkMode ? Colors.white : Colors.black,
       ),
