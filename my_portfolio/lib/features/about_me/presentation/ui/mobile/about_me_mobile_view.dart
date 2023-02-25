@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 
 import '../../../../../utils/constant/ui_constant.dart';
 import '../../../../../utils/responsive/app_responsive.dart';
+import '../../widgets/about_me_detail.dart';
+import '../../widgets/skill_graphic_details.dart';
 
 class AboutMeMobileView extends StatelessWidget {
   const AboutMeMobileView({Key? key}) : super(key: key);
@@ -21,156 +23,243 @@ class AboutMeMobileView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Align(
+            const Align(
               alignment: Alignment.center,
-              child: SizedBox(
-                height: SizeConfig.screenHeight! * 0.6,
-                child: Image.asset(
-                  AppAssets.devImage!,
-                  fit: BoxFit.scaleDown,
-                  filterQuality: FilterQuality.high,
-                  isAntiAlias: true,
-                ),
-              ),
+              child: AboutMeDetail(),
             ),
             SizedBox(
-              height: SizeConfig.safeBlockHorizontal! * 2,
+              height: SizeConfig.blockSizeHorizontal! * 1.75,
             ),
-            Text(
-              "Hello, This is Muhammad Mashood Siddiquie, I have done Bachelor's in computer science from Sir Syed University Of Engineering & Technology. I have been creating mobile applications for 3 years using Flutter and Android.I am very passionate and dedicated to my work.",
-              textAlign: TextAlign.justify,
-              style: _theme.textTheme.headlineLarge?.copyWith(
-                fontSize: SizeConfig.safeBlockHorizontal! * 3,
-                fontWeight: FontWeight.w500,
-                color: Get.isDarkMode ? Colors.white : Colors.black,
-              ),
-            ),
-            SizedBox(
-              height: SizeConfig.safeBlockHorizontal! * 2,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                "These are some of my skills:",
-                textAlign: TextAlign.start,
-                style: _theme.textTheme.headlineLarge?.copyWith(
-                  fontSize: SizeConfig.safeBlockHorizontal! * 4,
-                  fontWeight: FontWeight.w900,
-                  color: Get.isDarkMode ? Colors.white : Colors.black,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: SizeConfig.blockSizeVertical! * 3,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                FlutterLogo(
+            SkillsGraphicalDataDetails(
+              theme: _theme,
+              leading: SizedBox(
+                width: SizeConfig.safeBlockHorizontal! * 5,
+                height: SizeConfig.safeBlockHorizontal! * 5,
+                child: FlutterLogo(
                   curve: Curves.fastLinearToSlowEaseIn,
-                  size: SizeConfig.safeBlockHorizontal! * 7,
+                  size: SizeConfig.safeBlockHorizontal! * 2.5,
                   duration: const Duration(milliseconds: 500),
                 ),
-                SizedBox(
-                  width: SizeConfig.safeBlockHorizontal! * 2,
-                ),
-                const Expanded(
-                  child: LinearProgressIndicator(
-                    semanticsLabel: "Flutter",
-                    backgroundColor: Colors.grey,
-                    color: Colors.amber,
-                    value: 0.9,
-                  ),
-                ),
-              ],
+              ),
+              title: "Flutter",
+              progressValue: 0.9,
+              progressColor: Colors.lightBlue,
             ),
             SizedBox(
-              height: SizeConfig.safeBlockHorizontal! * 4,
+              height: SizeConfig.blockSizeHorizontal! * 0.3,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                AnimatedContainer(
-                  width: SizeConfig.safeBlockHorizontal! * 7,
-                  height: SizeConfig.safeBlockHorizontal! * 7,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.fastOutSlowIn,
-                  child: SvgPicture.asset(
-                    AppAssets.androidIcon!,
-                    fit: BoxFit.contain,
-                  ),
+            SkillsGraphicalDataDetails(
+              theme: _theme,
+              leading: AnimatedContainer(
+                width: SizeConfig.safeBlockHorizontal! * 5,
+                height: SizeConfig.safeBlockHorizontal! * 5,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.fastOutSlowIn,
+                child: SvgPicture.asset(
+                  AppAssets.androidIcon!,
+                  fit: BoxFit.scaleDown,
                 ),
-                SizedBox(
-                  width: SizeConfig.safeBlockHorizontal! * 2,
-                ),
-                const Expanded(
-                  child: LinearProgressIndicator(
-                    backgroundColor: Colors.grey,
-                    color: Colors.amber,
-                    semanticsLabel: "Android",
-                    value: 0.75,
-                  ),
-                ),
-              ],
+              ),
+              title: "Android",
+              progressValue: 0.75,
+              progressColor: Colors.lightGreen,
             ),
             SizedBox(
-              height: SizeConfig.safeBlockHorizontal! * 4,
+              height: SizeConfig.blockSizeHorizontal! * 0.3,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                AnimatedContainer(
-                  width: SizeConfig.safeBlockHorizontal! * 5,
-                  height: SizeConfig.safeBlockHorizontal! * 5,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.fastOutSlowIn,
-                  child: SvgPicture.asset(
-                    AppAssets.jiraIcon!,
-                    fit: BoxFit.contain,
-                  ),
+            SkillsGraphicalDataDetails(
+              theme: _theme,
+              leading: AnimatedContainer(
+                width: SizeConfig.safeBlockHorizontal! * 5,
+                height: SizeConfig.safeBlockHorizontal! * 5,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.fastOutSlowIn,
+                child: SvgPicture.asset(
+                  AppAssets.jiraIcon!,
+                  fit: BoxFit.contain,
                 ),
-                SizedBox(
-                  width: SizeConfig.safeBlockHorizontal! * 2,
-                ),
-                const Expanded(
-                  child: LinearProgressIndicator(
-                    semanticsLabel: "Jira",
-                    backgroundColor: Colors.grey,
-                    color: Colors.amber,
-                    value: 0.7,
-                  ),
-                ),
-              ],
+              ),
+              title: "Jira",
+              progressValue: 0.7,
+              progressColor: Colors.blue,
             ),
             SizedBox(
-              height: SizeConfig.safeBlockHorizontal! * 4,
+              height: SizeConfig.blockSizeHorizontal! * 0.3,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            SkillsGraphicalDataDetails(
+              theme: _theme,
+              leading: AnimatedContainer(
+                width: SizeConfig.safeBlockHorizontal! * 5,
+                height: SizeConfig.safeBlockHorizontal! * 5,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.fastOutSlowIn,
+                child: SvgPicture.asset(
+                  AppAssets.gitIcon!,
+                  fit: BoxFit.contain,
+                ),
+              ),
+              title: "Git",
+              progressValue: 0.7,
+              progressColor: Colors.deepOrange,
+            ),
+            SizedBox(
+              height: SizeConfig.blockSizeHorizontal! * 1.75,
+            ),
+            GridView.count(
+              shrinkWrap: true,
+              crossAxisCount: 2,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              childAspectRatio: 2.5,
               children: [
-                AnimatedContainer(
-                  width: SizeConfig.safeBlockHorizontal! * 5,
-                  height: SizeConfig.safeBlockHorizontal! * 5,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.fastOutSlowIn,
-                  child: SvgPicture.asset(
-                    AppAssets.gitIcon!,
-                    fit: BoxFit.contain,
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.3,
+                        ),
+                        Text(
+                          "Android Developer",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 2,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w600,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.75,
+                        ),
+                        Text(
+                          "Daily Foods PVT LTD",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 1.5,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w500,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.35,
+                        ),
+                        Text(
+                          "2019 - 2020",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 1.5,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w500,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(
-                  width: SizeConfig.safeBlockHorizontal! * 2,
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.3,
+                        ),
+                        Text(
+                          "Application Developer",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 2,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w600,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.75,
+                        ),
+                        Text(
+                          "Leopards Courier Services PVT LTD",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 1.5,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w500,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.35,
+                        ),
+                        Text(
+                          "2020 - 2021",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 1.5,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w500,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                const Expanded(
-                  child: LinearProgressIndicator(
-                    backgroundColor: Colors.grey,
-                    color: Colors.amber,
-                    semanticsLabel: "Git",
-                    value: 0.7,
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.3,
+                        ),
+                        Text(
+                          "Software Engineer/Flutter TeamLead",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 2,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w600,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.75,
+                        ),
+                        Text(
+                          "Invision Solutions Inc.",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 1.5,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w500,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                        SizedBox(
+                          height: SizeConfig.blockSizeHorizontal! * 0.35,
+                        ),
+                        Text(
+                          "2021 - Present",
+                          textAlign: TextAlign.start,
+                          style: _theme.textTheme.headlineLarge?.copyWith(
+                            fontSize: SizeConfig.safeBlockHorizontal! * 1.5,
+                            letterSpacing: 0.75,
+                            fontWeight: FontWeight.w500,
+                            color: Get.isDarkMode ? Colors.white : Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

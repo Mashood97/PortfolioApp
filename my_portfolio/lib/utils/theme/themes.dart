@@ -5,7 +5,7 @@ class Themes {
   static final light = ThemeData.light().copyWith(
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.amber.shade500,
-    textTheme: GoogleFonts.montserratTextTheme(),
+    textTheme: GoogleFonts.rubikTextTheme(),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       selectedItemColor: Colors.black,
       unselectedItemColor: Color(0xFFBDBDBD),
@@ -46,8 +46,8 @@ class Themes {
   );
   static final dark = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: Colors.black,
-    primaryColor: Colors.amber.shade500,
-    textTheme: GoogleFonts.montserratTextTheme(),
+    primaryColor: Color.fromRGBO(255, 193, 7, 1),
+    textTheme: GoogleFonts.rubikTextTheme(),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       selectedItemColor: Colors.amber,
       unselectedItemColor: Colors.white,
