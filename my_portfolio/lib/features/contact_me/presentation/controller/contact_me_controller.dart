@@ -26,10 +26,10 @@ class ContactMeController extends GetxController {
 
   Future sendEmail() async {
     try {
-      _isDataLoading.value = true;
-
-      await dotenv.load();
       if (formKey.currentState?.validate() == true) {
+        _isDataLoading.value = true;
+
+        await dotenv.load();
         final url = Uri.parse(dotenv.env["url"]!);
         String serviceId = dotenv.env["s_id"]!;
         String templateId = dotenv.env["t_id"]!;

@@ -12,7 +12,7 @@ class ContactForm extends GetView<ContactMeController> {
     final _theme = Theme.of(context);
 
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(10),
       child: Form(
         key: controller.formKey,
         child: Obx(
@@ -174,7 +174,10 @@ class ContactForm extends GetView<ContactMeController> {
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: SizeConfig.blockSizeHorizontal! * 3.5,
+                    ),
                   ],
                 ),
         ),
