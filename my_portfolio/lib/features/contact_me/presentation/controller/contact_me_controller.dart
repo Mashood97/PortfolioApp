@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
 
@@ -12,6 +13,12 @@ class ContactMeController extends GetxController {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController messageController = TextEditingController();
 
+  void resetInputFields() {
+    nameController.clear();
+    emailController.clear();
+    messageController.clear();
+  }
+
   final formKey = GlobalKey<FormState>();
 
   final RxBool _isDataLoading = false.obs;
@@ -20,11 +27,13 @@ class ContactMeController extends GetxController {
   Future sendEmail() async {
     try {
       _isDataLoading.value = true;
+
+      await dotenv.load();
       if (formKey.currentState?.validate() == true) {
-        final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-        const serviceId = 'service_c6p2tvq';
-        const templateId = 'template_6crcpk4';
-        const userId = 'dmHrJwfz5lLd9wke7';
+        final url = Uri.parse(dotenv.env["url"]!);
+        String serviceId = dotenv.env["s_id"]!;
+        String templateId = dotenv.env["t_id"]!;
+        String userId = dotenv.env["u_id"]!;
         final response = await http.post(url,
             headers: {
               'Content-Type': 'application/json'
@@ -40,7 +49,8 @@ class ContactMeController extends GetxController {
               }
             }));
         log(response.body);
-        if (response.statusCode != 200) {
+        if (response.statusCode == 200) {
+          resetInputFields();
           var snackBar = SnackBar(
             content: Text(
               'Thanks, your message has been sent successfully',
