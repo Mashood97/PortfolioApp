@@ -1,5 +1,10 @@
+import 'dart:convert';
+import 'dart:html' as html;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../utils/responsive/app_responsive.dart';
 
@@ -75,6 +80,13 @@ class AboutMeDetail extends StatelessWidget {
             children: [
               TextSpan(
                 text: "LinkedIn",
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () async {
+                    if (!await launchUrl(Uri.parse(
+                        "https://www.linkedin.com/in/mashood-siddiquie-5940a9168/"))) {
+                      throw 'We are unable to launch linkedln, please try again ';
+                    }
+                  },
                 style: _theme.textTheme.headlineLarge?.copyWith(
                   fontSize: (AppResponsiveView.isDesktopDevice)
                       ? SizeConfig.blockSizeHorizontal! * 1.25
@@ -95,6 +107,40 @@ class AboutMeDetail extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        SizedBox(
+          height: (AppResponsiveView.isDesktopDevice)
+              ? SizeConfig.safeBlockHorizontal! * 2
+              : SizeConfig.safeBlockHorizontal! * 2.5,
+        ),
+        SizedBox(
+          height: SizeConfig.safeBlockVertical! * 5.5,
+          width: AppResponsiveView.isDesktopDevice
+              ? SizeConfig.safeBlockHorizontal! * 15
+              : SizeConfig.safeBlockHorizontal! * 25,
+          child: ElevatedButton(
+            onPressed: () async {
+              var dt = await rootBundle
+                  .load("assets/Muhammad Mashood Siddiquie.pdf");
+              await launchUrl(Uri.parse(
+                  "data:application/octet-stream;base64,${base64Encode(dt.buffer.asUint8List())}"));
+            },
+            style: const ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll(
+                Colors.amber,
+              ),
+            ),
+            child: Text(
+              "Download Resume",
+              style: _theme.textTheme.headlineMedium?.copyWith(
+                fontWeight: FontWeight.w600,
+                fontSize: AppResponsiveView.isDesktopDevice
+                    ? SizeConfig.safeBlockHorizontal! * 1
+                    : SizeConfig.safeBlockHorizontal! * 2,
+                color: Colors.black,
+              ),
+            ),
           ),
         ),
       ],

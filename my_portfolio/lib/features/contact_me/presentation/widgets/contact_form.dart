@@ -149,7 +149,7 @@ class ContactForm extends GetView<ContactMeController> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: SizedBox(
-                        height: SizeConfig.safeBlockVertical! * 6.5,
+                        height: SizeConfig.safeBlockVertical! * 5.5,
                         width: AppResponsiveView.isDesktopDevice
                             ? SizeConfig.safeBlockHorizontal! * 15
                             : SizeConfig.safeBlockHorizontal! * 25,
