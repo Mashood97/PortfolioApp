@@ -35,6 +35,17 @@ class SkillsGraphicalDataDetails extends StatelessWidget {
           color: Get.isDarkMode ? Colors.white : Colors.black,
         ),
       ),
+      trailing: Text(
+        "${progressValue * 100}%",
+        textAlign: TextAlign.start,
+        style: _theme.textTheme.headlineLarge?.copyWith(
+          fontSize: AppResponsiveView.isDesktopDevice
+              ? SizeConfig.safeBlockHorizontal! * 1.25
+              : SizeConfig.safeBlockHorizontal! * 2.25,
+          fontWeight: FontWeight.w500,
+          color: Get.isDarkMode ? Colors.white : Colors.black,
+        ),
+      ),
       subtitle: LinearProgressIndicator(
         backgroundColor: Get.isDarkMode ? Colors.white : Colors.grey.shade300,
         color: progressColor,
