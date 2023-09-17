@@ -20,6 +20,7 @@ class GetAppList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       separatorBuilder: (_, __) => const Divider(
         endIndent: 50,
         indent: 50,
