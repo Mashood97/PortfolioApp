@@ -39,6 +39,20 @@ class ContactForm extends GetView<ContactMeController> {
                       ),
                     ),
                     SizedBox(
+                      height: SizeConfig.blockSizeHorizontal! * 2,
+                    ),
+                    Text(
+                      "Let's build together your innovative idea.",
+                      textAlign: TextAlign.start,
+                      style: _theme.textTheme.headlineLarge?.copyWith(
+                        fontSize: (AppResponsiveView.isDesktopDevice)
+                            ? SizeConfig.safeBlockHorizontal! * 2
+                            : SizeConfig.safeBlockHorizontal! * 5,
+                        fontWeight: FontWeight.w700,
+                        color: Get.isDarkMode ? Colors.white54 : Colors.black54,
+                      ),
+                    ),
+                    SizedBox(
                       height: SizeConfig.blockSizeHorizontal! * 3,
                     ),
                     TextFormField(

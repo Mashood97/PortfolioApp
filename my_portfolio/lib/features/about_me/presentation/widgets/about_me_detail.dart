@@ -36,7 +36,7 @@ class AboutMeDetail extends StatelessWidget {
               : SizeConfig.safeBlockHorizontal! * 2.5,
         ),
         Text(
-          "Hello, This is Muhammad Mashood Siddiquie, I have completed my Bachelor's in Computer Science from Sir Syed University Of Engineering & Technology. I have been creating mobile applications for 3+ years using Flutter and Android. I am very passionate and dedicated to my work. In my leisure time i love to play video games.",
+          "Hello, This is Muhammad Mashood Siddiquie, I have completed my Bachelor's in Computer Science from Sir Syed University Of Engineering & Technology. I have been creating mobile applications for 4+ years using Flutter and Android. I am very passionate and dedicated to my work. In my leisure time I love to play video games.",
           textAlign: TextAlign.justify,
           style: _theme.textTheme.headlineLarge?.copyWith(
             fontSize: (AppResponsiveView.isDesktopDevice)
@@ -52,7 +52,7 @@ class AboutMeDetail extends StatelessWidget {
               : SizeConfig.safeBlockHorizontal! * 2.5,
         ),
         Text(
-          "In my professional 3+ career i have worked for 3 companies with the most talented people around by whom I've groom myself in technical as well as the personal growth. Furthermore I've worked on many project and products which enhanced and polished my skills more during my each tenure.",
+          "In my professional 4+ career I have worked for 3 companies with the most talented people around by whom I've groom myself in technical as well as the personal growth. Furthermore I've worked on many project and products which enhanced and polished my skills more during my each tenure.",
           textAlign: TextAlign.justify,
           style: _theme.textTheme.headlineLarge?.copyWith(
             fontSize: (AppResponsiveView.isDesktopDevice)

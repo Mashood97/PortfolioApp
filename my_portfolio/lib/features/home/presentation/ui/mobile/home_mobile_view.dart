@@ -39,6 +39,11 @@ class HomeMobileView extends StatelessWidget {
                 label: "About me"),
             BottomNavigationBarItem(
                 icon: Icon(
+                  Icons.work,
+                ),
+                label: "My Portfolio"),
+            BottomNavigationBarItem(
+                icon: Icon(
                   Icons.contact_mail_sharp,
                 ),
                 label: "Contact me"),

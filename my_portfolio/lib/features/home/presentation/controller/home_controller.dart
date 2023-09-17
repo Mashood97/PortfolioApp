@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_portfolio/features/contact_me/presentation/controller/contact_me_controller.dart';
 import 'package:my_portfolio/features/landing/presentation/pages/landing_page.dart';
+import 'package:my_portfolio/features/my_portfolio/presentation/pages/my_portolio_page.dart';
 
 import '../../../about_me/presentation/pages/about_me_page.dart';
 import '../../../contact_me/presentation/pages/contact_me_page.dart';
@@ -13,6 +14,7 @@ class HomeController extends GetxController {
   final RxList<Widget> _pages = RxList<Widget>([
     LandingPage(),
     const AboutMePage(),
+    const MyPortfolioPage(),
     const ContactMePage(),
   ]);
 

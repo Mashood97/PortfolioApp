@@ -18,8 +18,8 @@ class AppResponsiveView extends StatelessWidget {
   static bool get isMobileDevice =>
       Get.size.width >= 275 && Get.size.width < 700;
   static bool get isTabletDevice =>
-      Get.size.width >= 700 && Get.size.width < 900;
-  static bool get isDesktopDevice => Get.size.width >= 900;
+      Get.size.width >= 700 && Get.size.width < 1100;
+  static bool get isDesktopDevice => Get.size.width >= 1100;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class AppResponsiveView extends StatelessWidget {
       desktop: (ctx) => desktopLayout!,
       tablet: (ctx) => tabletLayout!,
       breakpoints: const ScreenBreakpoints(
-        desktop: 1400,
+        desktop: 1100,
         tablet: 700,
         watch: 200,
       ),
